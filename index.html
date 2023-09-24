@@ -19,13 +19,14 @@
 <body>
   <div id="google_translate_element"></div>
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+  </script>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <div class="whatsappimg">
     <a href="https://wa.me/918387967670"><img src="public/whatsapp-icon-logo-BDC0A8063B-seeklogo.com.png" alt=""
@@ -47,7 +48,7 @@ function googleTranslateElementInit() {
   <div class="home-page-div">
     <div class="header-1-div4">
       <div class="background-div4">
-        <img class="hero-3-cover-icon" alt="" src="public/hero3cover@2x.png" />
+        <img class="hero-3-cover-icon" id="crows"  alt="" src="public/hero3cover@2x.png" />
         <div class="filter-div4"></div>
       </div>
       <div class="container-div12">
@@ -398,6 +399,27 @@ function googleTranslateElementInit() {
 
 
   <script>
+    let croId = document.getElementById('crows');
+    let count =0;
+    
+    setInterval(()=>{
+      if(count==0)
+      croId.src = "public/hero3cover@2x.png";
+      else if(count==1)
+      croId.src = "public/img11.avif";
+      else if(count==2)
+      croId.src = "public/img22.avif";
+      else if(count==3)
+      croId.src = "public/img33.avif";
+      else if(count==4)      
+      croId.src = "public/img44.avif";
+      console.log('hello')
+      count++;
+      if(count==5){
+        count=0;
+      }
+    },2000);
+
     var linkText = document.getElementById("linkText");
     if (linkText) {
       linkText.addEventListener("click", function (e) {
