@@ -48,8 +48,9 @@
   <div class="home-page-div">
     <div class="header-1-div4">
       <div class="background-div4">
-        <img class="hero-3-cover-icon" id="crows"  alt="" src="public/hero3cover@2x.png" />
+        <img class="hero-3-cover-icon" id="crows" alt="" src="public/hero3cover@2x.png" />
         <div class="filter-div4"></div>
+
       </div>
       <div class="container-div12">
         <div class="navbar-style-2-navbar-light-div4">
@@ -72,6 +73,11 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <img onclick="DarkFunc()"  src="public/dkm.png"
+              style="cursor: pointer;width:40px;height:40px;border-radius: 50%;border:1px solid black;" alt="Dark mode">
+            <!-- <button id="DkMode" >Dark mode</button -->
           </div>
           <div class="navbar-nav-div5">
             <div class="nav-item-div10">
@@ -397,37 +403,37 @@
   </script>
 
 
+  <script src="./BgScript.js" >
 
-  <script>
     let croId = document.getElementById('crows');
-    let count =0;
-    
-    setInterval(()=>{
-      if(count==0)
-      croId.src = "public/hero3cover@2x.png";
-      else if(count==1)
-      croId.src = "public/img11.avif";
-      else if(count==2)
-      croId.src = "public/img22.avif";
-      else if(count==3)
-      croId.src = "public/img33.avif";
-      else if(count==4)      
-      croId.src = "public/img44.avif";
-      else if(count==5)
-      croId.src = "public/img55.avif";
-      else if(count==6)
-      croId.src = "public/img66.avif";
-      else if(count==7)      
-      croId.src = "public/img77.avif";
-      else{
-      croId.src = "public/img88.avif";
+    let count = 0;
+
+    setInterval(() => {
+      if (count == 0)
+        croId.src = "public/hero3cover@2x.png";
+      else if (count == 1)
+        croId.src = "public/img11.avif";
+      else if (count == 2)
+        croId.src = "public/img22.avif";
+      else if (count == 3)
+        croId.src = "public/img33.avif";
+      else if (count == 4)
+        croId.src = "public/img44.avif";
+      else if (count == 5)
+        croId.src = "public/img55.avif";
+      else if (count == 6)
+        croId.src = "public/img66.avif";
+      else if (count == 7)
+        croId.src = "public/img77.avif";
+      else {
+        croId.src = "public/img88.avif";
       }
 
       count++;
-      if(count==9){
-        count=0;
+      if (count == 9) {
+        count = 0;
       }
-    },2000);
+    }, 2000);
 
     var linkText = document.getElementById("linkText");
     if (linkText) {
