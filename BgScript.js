@@ -74,8 +74,22 @@ function last2ndFooterBg(){
   element.style.backgroundColor = 'rgb(239, 239, 239)';
   }
 }
+function NavB(){
+  const element = document.getElementsByClassName('collapse-navbar-collapse-div4')[0];
+  const element1 = document.getElementsByClassName('link-b49')[1];
+  const currentBackgroundColor = window.getComputedStyle(element).color;
+  console.log(currentBackgroundColor);
+  if (currentBackgroundColor === 'rgb(239, 239, 239)') {
+   element.style.color = 'rgb(26, 59, 81)';
+   element1.style.color = 'rgb(26, 59, 81)';
+  } else {
+  element.style.color = 'rgb(239, 239, 239)';
+  element1.style.color = 'rgb(239, 239, 239)';
+  }
+}
 
 // know your crops here
+// 
 function DarkFunc() {
   googleBg();
   headerBg();
@@ -84,6 +98,7 @@ function DarkFunc() {
   weatcherText();
   FooterBg();
   last2ndFooterBg();
+  NavB();
     const element = document.getElementsByClassName('layout-2-div')[0];
     const currentBackgroundColor = window.getComputedStyle(element).backgroundColor;
 
